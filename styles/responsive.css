@@ -1,0 +1,317 @@
+        /* ============================================================
+   OVERRIDES — Media Queries & Reduced Motion
+   ============================================================ */
+
+        @layer overrides {
+            /* — Tablet Breakpoint (≤980px) — */
+
+            @media (max-width: 980px) {
+                .nav-inner {
+                    grid-template-columns: auto auto;
+                    justify-content: space-between;
+                }
+
+                .menu-toggle {
+                    display: inline-flex;
+                }
+
+                .nav-links,
+                .nav-cta {
+                    display: none;
+                }
+
+                .mobile-panel {
+                    position: fixed;
+                    inset: 0;
+                    z-index: var(--z-overlay);
+                    display: grid;
+                    align-content: center;
+                    gap: var(--space-5);
+                    padding: 100px var(--space-7) var(--space-10);
+                    color: var(--paper-soft);
+                    background: rgba(17, 17, 17, 0.96);
+                    transform: translateY(-100%);
+                    transition: transform 0.45s var(--ease);
+                }
+
+                .menu-open .mobile-panel {
+                    transform: translateY(0);
+                }
+
+                .mobile-panel a {
+                    font-family: var(--font-serif);
+                    font-size: clamp(2.2rem, 12vw, 5rem);
+                    letter-spacing: var(--tracking-tight);
+                    line-height: 0.9;
+                }
+
+                .split,
+                .split.reverse,
+                .service-system,
+                .quote {
+                    grid-template-columns: 1fr;
+                }
+
+                .service-tabs {
+                    position: static;
+                }
+
+                .panel-content,
+                .outcome-strip,
+                .engagements {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                .industry-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .work-item {
+                    grid-template-columns: 1fr;
+                }
+
+                .work-tag {
+                    white-space: normal;
+                }
+
+                .process-rail li {
+                    grid-template-columns: 70px 1fr;
+                }
+
+                .process-rail p {
+                    grid-column: 2;
+                }
+
+                .cursor-light,
+                .work-image {
+                    display: none;
+                }
+            }
+
+            /* — Mobile Breakpoint (≤700px) — */
+
+            @media (max-width: 700px) {
+                .nav {
+                    padding: var(--space-3) var(--space-3) 0;
+                }
+
+                .brand-mark span:last-child {
+                    max-width: 130px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .hero-inner,
+                .section,
+                .footer-inner {
+                    width: var(--space-container-sm);
+                }
+
+                .hero-inner {
+                    padding-bottom: var(--space-9);
+                }
+
+                .hero-title {
+                    font-size: clamp(3.4rem, 18vw, 6.7rem);
+                }
+
+                .scroll-cue {
+                    display: none;
+                }
+
+                .text-columns,
+                .panel-content,
+                .outcome-strip,
+                .industry-grid,
+                .engagements,
+                .form-grid,
+                .footer-inner {
+                    grid-template-columns: 1fr;
+                }
+
+                .line-list li,
+                .team-person,
+                .insight {
+                    grid-template-columns: 1fr;
+                    gap: var(--space-3);
+                }
+
+                .team-header {
+                    grid-template-columns: 1fr auto;
+                    gap: var(--space-2);
+                }
+
+                .team-bio-inner {
+                    padding-left: 0;
+                }
+
+                .system-diagram {
+                    min-height: 390px;
+                }
+
+                .process-rail li {
+                    grid-template-columns: 1fr;
+                    gap: var(--space-3);
+                }
+
+                .process-rail p {
+                    grid-column: auto;
+                }
+
+                .partner-track span {
+                    padding-inline: var(--space-6);
+                }
+
+                /* Stats grid collapses to single column */
+                .hero-stats-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .hero-stat {
+                    border-right: none;
+                    border-bottom: 1px solid var(--line);
+                }
+
+                .hero-stat:last-child {
+                    border-bottom: none;
+                }
+
+                /* Stack grid collapses */
+                .stack-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                /* Newsletter form stacks */
+                .newsletter {
+                    padding: var(--space-9) var(--space-5);
+                }
+
+                .newsletter-form {
+                    flex-direction: column;
+                    border-radius: var(--radius-lg);
+                }
+
+                .newsletter-form button {
+                    border-radius: var(--radius-pill);
+                }
+
+                /* Comparison table stacks */
+                .compare-row {
+                    grid-template-columns: 1fr;
+                }
+
+                .compare-row>div {
+                    border-right: none;
+                }
+
+                /* Calc stacks */
+                .calc {
+                    grid-template-columns: 1fr;
+                    padding: var(--space-6);
+                }
+            }
+
+            /* — Small Mobile Breakpoint (≤480px) — */
+
+            @media (max-width: 480px) {
+                .stack-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .hero-actions {
+                    flex-direction: column;
+                }
+
+                .btn {
+                    width: 100%;
+                }
+
+                .quote {
+                    gap: var(--space-5);
+                }
+
+                .quote blockquote {
+                    font-size: clamp(1.6rem, 8vw, 3rem);
+                }
+
+                .cookies {
+                    left: var(--space-4);
+                    right: var(--space-4);
+                    bottom: var(--space-4);
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .cookies button {
+                    width: 100%;
+                }
+            }
+
+            /* — Reduced Motion — */
+
+            @media (prefers-reduced-motion: reduce) {
+
+                *,
+                *::before,
+                *::after {
+                    animation-duration: 0.001ms !important;
+                    animation-iteration-count: 1 !important;
+                    scroll-behavior: auto !important;
+                    transition-duration: 0.001ms !important;
+                }
+            }
+
+            /* — High Contrast Mode — */
+
+            @media (prefers-contrast: high) {
+                :root {
+                    --line: rgba(17, 17, 17, 0.4);
+                    --line-strong: rgba(17, 17, 17, 0.7);
+                    --muted: #4a4540;
+                }
+
+                .nav-links a::after {
+                    height: 3px;
+                }
+
+                .industry:hover {
+                    border: 2px solid currentColor;
+                }
+            }
+
+            /* — Print Styles — */
+
+            @media print {
+
+                .announcement-bar,
+                .skip-link,
+                .nav,
+                .mobile-panel,
+                .scroll-cue,
+                .back-top,
+                .cookies,
+                .cursor-light,
+                .work-image {
+                    display: none !important;
+                }
+
+                body {
+                    background: var(--white);
+                    color: var(--ink);
+                }
+
+                .hero {
+                    min-height: auto;
+                    color: var(--ink);
+                }
+
+                .hero::before,
+                .hero::after {
+                    display: none;
+                }
+
+                a[href]::after {
+                    content: " ("attr(href) ")";
+                }
+            }
+        }

@@ -1,0 +1,65 @@
+        /* ============================================================
+   KEYFRAMES
+   ============================================================ */
+
+        @keyframes heroDrift {
+            from {
+                transform: scale(1.04) translate3d(0, 0, 0);
+            }
+
+            to {
+                transform: scale(1.1) translate3d(-1.5%, 1%, 0);
+            }
+        }
+
+        @keyframes cuePulse {
+
+            0%,
+            100% {
+                transform: scaleX(0.5);
+                opacity: 0.45;
+            }
+
+            50% {
+                transform: scaleX(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeLift {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes announceScroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes rotateSlow {
+            to {
+                transform: rotate(360deg);
+            }
+        }
