@@ -1,6 +1,3 @@
-Here is the complete README.md content formatted inside a single copy-pasteable
-Markdown block for direct use on GitHub:
-
 # [Aurora & Co.](https://aurora-co.jawadiftikhar.com/) — Strategy, Brand, and Performance Theme
 
 A modern, responsive, and performance-oriented single-page agency portfolio theme. Built upon a framework-free frontend stack consisting of semantic HTML5, Tailwind CSS, and optimized vanilla JavaScript, this theme leverages advanced browser-native APIs and modular CSS architectures to deliver interactive UX components without importing heavy runtime frameworks.
